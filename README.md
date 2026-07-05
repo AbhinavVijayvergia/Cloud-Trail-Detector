@@ -56,9 +56,11 @@ Built entirely on AWS Free Tier. No paid infrastructure.
 
 ## Detection Rules
 
-| # | ATT&CK ID | Technique | Rule File | Status |
-|---|-----------|-----------|-----------|--------|
-| — | — | — | — | Coming Phase 1 |
+| # | ATT&CK ID | Technique | Rule File | Severity |
+|---|-----------|-----------|-----------|----------|
+| 1 | T1078 | Valid Accounts | `t1078_iam_key_creation.yml` | High |
+| 2 | T1530 | Data from Cloud Storage Object | `t1530_s3_enumeration.yml` | Medium |
+| 3 | T1548 | Abuse Elevation Control Mechanism | `t1548_role_assumption.yml` | High |
 
 ---
 
@@ -70,7 +72,17 @@ Built entirely on AWS Free Tier. No paid infrastructure.
 
 ## How to Run
 
-*Instructions will be added after Phase 1.*
+**Requirements**: Python 3.10+, PyYAML
+
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Generate simulated attack logs
+python -m log_generator.generate
+
+# Run detection engine against all test logs
+python -m detection_engine.engine
 
 ---
 

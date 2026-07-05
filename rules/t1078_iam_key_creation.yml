@@ -1,0 +1,24 @@
+id: CTD-001
+name: "IAM Access Key Creation"
+description: "Detects creation of new IAM access keys. Attackers create keys to maintain persistent access to an AWS account after initial compromise."
+author: "Abhinav Vijayvergia"
+date: "2026-07-05"
+severity: high
+
+mitre:
+  technique_id: "T1078"
+  technique_name: "Valid Accounts"
+  tactic: "Persistence"
+
+detection:
+  match:
+    eventSource: "iam.amazonaws.com"
+    eventName: "CreateAccessKey"
+
+false_positives:
+  - "Automated key rotation by CI/CD pipelines"
+  - "Admin provisioning keys for new team members"
+
+references:
+  - "https://attack.mitre.org/techniques/T1078/"
+  - "https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateAccessKey.html"

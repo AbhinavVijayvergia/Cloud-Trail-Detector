@@ -1,0 +1,32 @@
+{
+  "Records": [
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/compromised-user",
+        "accountId": "123456789012",
+        "userName": "compromised-user"
+      },
+      "eventTime": "2026-07-05T07:34:23Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "CreateAccessKey",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.23",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {
+        "userName": "compromised-user"
+      },
+      "responseElements": {
+        "accessKey": {
+          "accessKeyId": "AKIAIOSFODNN7EXAMPLE",
+          "status": "Active",
+          "userName": "compromised-user"
+        }
+      },
+      "errorCode": null,
+      "errorMessage": null
+    }
+  ]
+}

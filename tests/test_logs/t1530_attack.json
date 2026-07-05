@@ -1,0 +1,68 @@
+{
+  "Records": [
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/recon-user",
+        "accountId": "123456789012",
+        "userName": "recon-user"
+      },
+      "eventTime": "2026-07-05T14:00:00Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "ListBuckets",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.50",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {},
+      "responseElements": {},
+      "errorCode": null,
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/recon-user",
+        "accountId": "123456789012",
+        "userName": "recon-user"
+      },
+      "eventTime": "2026-07-05T14:00:30Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "GetBucketAcl",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.50",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {
+        "bucketName": "company-secrets-backup"
+      },
+      "responseElements": {},
+      "errorCode": null,
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/recon-user",
+        "accountId": "123456789012",
+        "userName": "recon-user"
+      },
+      "eventTime": "2026-07-05T14:00:45Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "ListObjects",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.50",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {
+        "bucketName": "company-secrets-backup"
+      },
+      "responseElements": {},
+      "errorCode": null,
+      "errorMessage": null
+    }
+  ]
+}

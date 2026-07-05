@@ -1,0 +1,36 @@
+{
+  "Records": [
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/low-privilege-user",
+        "accountId": "123456789012",
+        "userName": "low-privilege-user"
+      },
+      "eventTime": "2026-07-05T07:34:23Z",
+      "eventSource": "sts.amazonaws.com",
+      "eventName": "AssumeRole",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.99",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {
+        "roleArn": "arn:aws:iam::123456789012:role/AdminRole",
+        "roleSessionName": "escalation-session"
+      },
+      "responseElements": {
+        "credentials": {
+          "accessKeyId": "ASIAIOSFODNN7EXAMPLE",
+          "expiration": "2026-07-05T15:00:00Z"
+        },
+        "assumedRoleUser": {
+          "assumedRoleId": "AROA3XFRBF23EXAMPLE:escalation-session",
+          "arn": "arn:aws:sts::123456789012:assumed-role/AdminRole/escalation-session"
+        }
+      },
+      "errorCode": null,
+      "errorMessage": null
+    }
+  ]
+}

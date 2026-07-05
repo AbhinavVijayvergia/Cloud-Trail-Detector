@@ -1,0 +1,27 @@
+id: CTD-002
+name: "S3 Bucket Enumeration"
+description: "Detects enumeration of S3 buckets and their permissions. Attackers list buckets and check ACLs to find sensitive data like database backups, config files, or secrets."
+author: "Abhinav Vijayvergia"
+date: "2026-07-05"
+severity: medium
+
+mitre:
+  technique_id: "T1530"
+  technique_name: "Data from Cloud Storage Object"
+  tactic: "Collection"
+
+detection:
+  match:
+    eventSource: "s3.amazonaws.com"
+    eventName:
+      - "ListBuckets"
+      - "GetBucketAcl"
+      - "ListObjects"
+
+false_positives:
+  - "Legitimate S3 management tools scanning bucket inventory"
+  - "Backup scripts listing buckets on a schedule"
+
+references:
+  - "https://attack.mitre.org/techniques/T1530/"
+  - "https://docs.aws.amazon.com/AmazonS3/latest/API/API_ListBuckets.html"

@@ -1,0 +1,24 @@
+id: CTD-003
+name: "IAM Role Assumption"
+description: "Detects assumption of IAM roles via STS. Attackers assume higher-privilege roles to escalate access beyond their initial compromised credentials."
+author: "Abhinav Vijayvergia"
+date: "2026-07-05"
+severity: high
+
+mitre:
+  technique_id: "T1548"
+  technique_name: "Abuse Elevation Control Mechanism"
+  tactic: "Privilege Escalation"
+
+detection:
+  match:
+    eventSource: "sts.amazonaws.com"
+    eventName: "AssumeRole"
+
+false_positives:
+  - "AWS services assuming roles for normal operations (Lambda, EC2)"
+  - "Cross-account access configured by administrators"
+
+references:
+  - "https://attack.mitre.org/techniques/T1548/"
+  - "https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.html"
