@@ -138,7 +138,7 @@ def generate_coverage_md(rules):
     lines.append("")
     lines.append("## False Positive Tuning Results")
     lines.append("")
-    lines.append("Measured on a mixed batch of 35 CloudTrail events (attack + benign).")
+    lines.append("Measured on a mixed batch of 28 CloudTrail events (attack + benign).")
     lines.append("")
     lines.append("| Metric | Before Tuning | After Tuning |")
     lines.append("|--------|--------------|--------------|")

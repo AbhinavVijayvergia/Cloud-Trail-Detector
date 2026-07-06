@@ -1,6 +1,6 @@
 # ATT&CK Coverage Dashboard — Cloud-Trail-Detector
 
-*Auto-generated on 2026-07-06 08:07 UTC. Run `python coverage/generate_coverage.py` to update.*
+*Auto-generated on 2026-07-06 09:06 UTC. Run `python coverage/generate_coverage.py` to update.*
 
 ---
 
@@ -44,7 +44,7 @@
 
 ## False Positive Tuning Results
 
-Measured on a mixed batch of 35 CloudTrail events (attack + benign).
+Measured on a mixed batch of 28 CloudTrail events (attack + benign).
 
 | Metric | Before Tuning | After Tuning |
 |--------|--------------|--------------|
