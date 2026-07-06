@@ -6,7 +6,7 @@ These are NOT real AWS log - they're crafted to look like real CloudTrail output
 
 import json
 import os
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 
 #Output directory for generated logs
@@ -21,7 +21,7 @@ def make_event(event_source, event_name, user_name="alice", user_type="IAMUser",
     """
 
     if event_time is None:
-        event_time = datetime.now(datetime.UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
+        event_time = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
     event = {
         "eventVersion": "1.08",
@@ -154,6 +154,103 @@ def generate_benign_events():
     ]
     return {"Records": events}
 
+def generate_t1110_brute_force():
+    """T1110 — Brute Force: Repeated failed console login attempts."""
+    base_time = datetime(2026, 7, 6, 9, 0, 0)
+    events = []
+    # Simulate 5 failed login attempts in quick succession
+    for i in range(5):
+        event = make_event(
+            event_source="signin.amazonaws.com",
+            event_name="ConsoleLogin",
+            user_name="admin",
+            source_ip="198.51.100.77",
+            event_time=(base_time + timedelta(seconds=i * 10)).strftime("%Y-%m-%dT%H:%M:%SZ")
+        )
+        # Failed login has errorMessage set, no responseElements
+        event["errorMessage"] = "Failed authentication"
+        event["responseElements"] = {"ConsoleLogin": "Failure"}
+        events.append(event)
+    return {"Records": events}
+
+
+def generate_t1110_benign():
+    """Benign: Single successful console login — normal user activity."""
+    event = make_event(
+        event_source="signin.amazonaws.com",
+        event_name="ConsoleLogin",
+        user_name="dev-alice",
+        source_ip="10.0.0.50"
+    )
+    event["errorMessage"] = None
+    event["responseElements"] = {"ConsoleLogin": "Success"}
+    return {"Records": [event]}
+
+
+def generate_t1087_account_discovery():
+    """T1087 — Account Discovery: Attacker enumerates IAM users, groups, and policies."""
+    base_time = datetime(2026, 7, 6, 10, 0, 0)
+    events = [
+        make_event(
+            event_source="iam.amazonaws.com",
+            event_name="ListUsers",
+            user_name="recon-user",
+            source_ip="198.51.100.88",
+            event_time=base_time.strftime("%Y-%m-%dT%H:%M:%SZ")
+        ),
+        make_event(
+            event_source="iam.amazonaws.com",
+            event_name="ListGroups",
+            user_name="recon-user",
+            source_ip="198.51.100.88",
+            event_time=(base_time + timedelta(seconds=15)).strftime("%Y-%m-%dT%H:%M:%SZ")
+        ),
+        make_event(
+            event_source="iam.amazonaws.com",
+            event_name="ListPolicies",
+            user_name="recon-user",
+            source_ip="198.51.100.88",
+            event_time=(base_time + timedelta(seconds=30)).strftime("%Y-%m-%dT%H:%M:%SZ")
+        ),
+    ]
+    return {"Records": events}
+
+
+def generate_t1087_benign():
+    """Benign: User checking their own info — normal, not enumeration."""
+    event = make_event(
+        event_source="iam.amazonaws.com",
+        event_name="GetUser",
+        user_name="dev-alice",
+        source_ip="10.0.0.50",
+        request_params={"userName": "dev-alice"}
+    )
+    return {"Records": [event]}
+
+
+def generate_t1562_disable_cloudtrail():
+    """T1562 — Impair Defenses: Attacker stops CloudTrail logging to cover tracks."""
+    event = make_event(
+        event_source="cloudtrail.amazonaws.com",
+        event_name="StopLogging",
+        user_name="attacker-user",
+        source_ip="198.51.100.11",
+        request_params={"name": "arn:aws:cloudtrail:us-east-1:123456789012:trail/main-trail"}
+    )
+    return {"Records": [event]}
+
+
+def generate_t1562_benign():
+    """Benign: Admin checking CloudTrail status — reading config, not stopping it."""
+    event = make_event(
+        event_source="cloudtrail.amazonaws.com",
+        event_name="GetTrailStatus",
+        user_name="security-admin",
+        source_ip="10.0.0.10",
+        request_params={"name": "main-trail"}
+    )
+    return {"Records": [event]}
+
 # --- File Output ---
 
 def save_logs(data, filename):
@@ -166,10 +263,23 @@ def save_logs(data, filename):
 
 def main():
     print("Generating simulated CloudTrail logs...\n")
+
+    # Phase 1 attack logs
     save_logs(generate_t1078_iam_key_creation(), "t1078_attack.json")
     save_logs(generate_t1530_s3_enumeration(), "t1530_attack.json")
     save_logs(generate_t1548_role_assumption(), "t1548_attack.json")
+
+    # Phase 2 attack logs
+    save_logs(generate_t1110_brute_force(), "t1110_attack.json")
+    save_logs(generate_t1087_account_discovery(), "t1087_attack.json")
+    save_logs(generate_t1562_disable_cloudtrail(), "t1562_attack.json")
+
+    # Benign logs (should NOT trigger any rules)
     save_logs(generate_benign_events(), "benign_activity.json")
+    save_logs(generate_t1110_benign(), "t1110_benign.json")
+    save_logs(generate_t1087_benign(), "t1087_benign.json")
+    save_logs(generate_t1562_benign(), "t1562_benign.json")
+
     print("\nDone. All logs saved to tests/test_logs/")
 
 if __name__ == "__main__":

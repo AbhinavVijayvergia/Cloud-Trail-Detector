@@ -5,35 +5,15 @@
       "userIdentity": {
         "type": "IAMUser",
         "principalId": "AIDACKCEVSQ6C2EXAMPLE",
-        "arn": "arn:aws:iam::123456789012:user/dev-alice",
+        "arn": "arn:aws:iam::123456789012:user/recon-user",
         "accountId": "123456789012",
-        "userName": "dev-alice"
+        "userName": "recon-user"
       },
-      "eventTime": "2026-07-06T07:25:16Z",
-      "eventSource": "ec2.amazonaws.com",
-      "eventName": "DescribeInstances",
+      "eventTime": "2026-07-06T10:00:00Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "ListUsers",
       "awsRegion": "us-east-1",
-      "sourceIPAddress": "10.0.0.50",
-      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
-      "requestParameters": {},
-      "responseElements": {},
-      "errorCode": null,
-      "errorMessage": null
-    },
-    {
-      "eventVersion": "1.08",
-      "userIdentity": {
-        "type": "AWSService",
-        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
-        "arn": "arn:aws:iam::123456789012:user/monitoring-service",
-        "accountId": "123456789012",
-        "userName": "monitoring-service"
-      },
-      "eventTime": "2026-07-06T07:25:16Z",
-      "eventSource": "monitoring.amazonaws.com",
-      "eventName": "PutMetricData",
-      "awsRegion": "us-east-1",
-      "sourceIPAddress": "10.0.0.100",
+      "sourceIPAddress": "198.51.100.88",
       "userAgent": "aws-cli/2.13.0 Python/3.10.0",
       "requestParameters": {},
       "responseElements": {},
@@ -45,20 +25,37 @@
       "userIdentity": {
         "type": "IAMUser",
         "principalId": "AIDACKCEVSQ6C2EXAMPLE",
-        "arn": "arn:aws:iam::123456789012:user/app-server",
+        "arn": "arn:aws:iam::123456789012:user/recon-user",
         "accountId": "123456789012",
-        "userName": "app-server"
+        "userName": "recon-user"
       },
-      "eventTime": "2026-07-06T07:25:16Z",
-      "eventSource": "s3.amazonaws.com",
-      "eventName": "GetObject",
+      "eventTime": "2026-07-06T10:00:15Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "ListGroups",
       "awsRegion": "us-east-1",
-      "sourceIPAddress": "10.0.0.25",
+      "sourceIPAddress": "198.51.100.88",
       "userAgent": "aws-cli/2.13.0 Python/3.10.0",
-      "requestParameters": {
-        "bucketName": "app-assets",
-        "key": "logo.png"
+      "requestParameters": {},
+      "responseElements": {},
+      "errorCode": null,
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/recon-user",
+        "accountId": "123456789012",
+        "userName": "recon-user"
       },
+      "eventTime": "2026-07-06T10:00:30Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "ListPolicies",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.88",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {},
       "responseElements": {},
       "errorCode": null,
       "errorMessage": null

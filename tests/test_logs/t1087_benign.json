@@ -5,26 +5,20 @@
       "userIdentity": {
         "type": "IAMUser",
         "principalId": "AIDACKCEVSQ6C2EXAMPLE",
-        "arn": "arn:aws:iam::123456789012:user/compromised-user",
+        "arn": "arn:aws:iam::123456789012:user/dev-alice",
         "accountId": "123456789012",
-        "userName": "compromised-user"
+        "userName": "dev-alice"
       },
       "eventTime": "2026-07-06T07:25:16Z",
       "eventSource": "iam.amazonaws.com",
-      "eventName": "CreateAccessKey",
+      "eventName": "GetUser",
       "awsRegion": "us-east-1",
-      "sourceIPAddress": "198.51.100.23",
+      "sourceIPAddress": "10.0.0.50",
       "userAgent": "aws-cli/2.13.0 Python/3.10.0",
       "requestParameters": {
-        "userName": "compromised-user"
+        "userName": "dev-alice"
       },
-      "responseElements": {
-        "accessKey": {
-          "accessKeyId": "AKIAIOSFODNN7EXAMPLE",
-          "status": "Active",
-          "userName": "compromised-user"
-        }
-      },
+      "responseElements": {},
       "errorCode": null,
       "errorMessage": null
     }

@@ -1,0 +1,36 @@
+name: CI — Detection Rules
+
+# Trigger: run this workflow on every push and pull request
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  validate-rules:
+    name: Validate Detection Rules
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the repo code onto the CI machine
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Set up Python
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # Step 4: Generate simulated attack logs (needed for tests)
+      - name: Generate simulated CloudTrail logs
+        run: python -m log_generator.generate
+
+      # Step 5: Run the detection rule test suite
+      - name: Run rule validation tests
+        run: python tests/test_rules.py

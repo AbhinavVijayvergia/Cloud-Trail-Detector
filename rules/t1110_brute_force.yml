@@ -1,0 +1,25 @@
+id: CTD-004
+name: "Console Login Failure"
+description: "Detects failed AWS console login attempts. A burst of these indicates brute force or credential stuffing against an AWS account."
+author: "Abhinav Vijayvergia"
+date: "2026-07-06"
+severity: high
+
+mitre:
+  technique_id: "T1110"
+  technique_name: "Brute Force"
+  tactic: "Credential Access"
+
+detection:
+  match:
+    eventSource: "signin.amazonaws.com"
+    eventName: "ConsoleLogin"
+    errorMessage: "Failed authentication"
+
+false_positives:
+  - "User mistyping password once or twice"
+  - "Password manager filling wrong credentials"
+
+references:
+  - "https://attack.mitre.org/techniques/T1110/"
+  - "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-aws-console-sign-in-events.html"

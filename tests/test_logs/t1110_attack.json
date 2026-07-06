@@ -1,0 +1,114 @@
+{
+  "Records": [
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/admin",
+        "accountId": "123456789012",
+        "userName": "admin"
+      },
+      "eventTime": "2026-07-06T09:00:00Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.77",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {},
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
+      "errorCode": null,
+      "errorMessage": "Failed authentication"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/admin",
+        "accountId": "123456789012",
+        "userName": "admin"
+      },
+      "eventTime": "2026-07-06T09:00:10Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.77",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {},
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
+      "errorCode": null,
+      "errorMessage": "Failed authentication"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/admin",
+        "accountId": "123456789012",
+        "userName": "admin"
+      },
+      "eventTime": "2026-07-06T09:00:20Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.77",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {},
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
+      "errorCode": null,
+      "errorMessage": "Failed authentication"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/admin",
+        "accountId": "123456789012",
+        "userName": "admin"
+      },
+      "eventTime": "2026-07-06T09:00:30Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.77",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {},
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
+      "errorCode": null,
+      "errorMessage": "Failed authentication"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/admin",
+        "accountId": "123456789012",
+        "userName": "admin"
+      },
+      "eventTime": "2026-07-06T09:00:40Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.77",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {},
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
+      "errorCode": null,
+      "errorMessage": "Failed authentication"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+id: CTD-005
+name: "IAM Account Enumeration"
+description: "Detects enumeration of IAM users, groups, and policies. Attackers map out account structure to identify high-value targets for privilege escalation."
+author: "Abhinav Vijayvergia"
+date: "2026-07-06"
+severity: medium
+
+mitre:
+  technique_id: "T1087"
+  technique_name: "Account Discovery"
+  tactic: "Discovery"
+
+detection:
+  match:
+    eventSource: "iam.amazonaws.com"
+    eventName:
+      - "ListUsers"
+      - "ListGroups"
+      - "ListPolicies"
+      - "GetAccountAuthorizationDetails"
+
+false_positives:
+  - "IAM audit tools running scheduled compliance checks"
+  - "Admin reviewing account structure during onboarding"
+
+references:
+  - "https://attack.mitre.org/techniques/T1087/"
+  - "https://docs.aws.amazon.com/IAM/latest/APIReference/API_ListUsers.html"

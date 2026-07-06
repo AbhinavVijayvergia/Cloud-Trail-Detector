@@ -1,0 +1,26 @@
+id: CTD-006
+name: "CloudTrail Logging Disabled"
+description: "Detects when CloudTrail logging is stopped or the trail is deleted. Attackers disable logging to operate without detection — this is a critical defense evasion technique."
+author: "Abhinav Vijayvergia"
+date: "2026-07-06"
+severity: critical
+
+mitre:
+  technique_id: "T1562"
+  technique_name: "Impair Defenses"
+  tactic: "Defense Evasion"
+
+detection:
+  match:
+    eventSource: "cloudtrail.amazonaws.com"
+    eventName:
+      - "StopLogging"
+      - "DeleteTrail"
+
+false_positives:
+  - "Planned CloudTrail reconfiguration during maintenance window"
+  - "Decommissioning trails in unused regions"
+
+references:
+  - "https://attack.mitre.org/techniques/T1562/"
+  - "https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_StopLogging.html"

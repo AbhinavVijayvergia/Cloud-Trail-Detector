@@ -9,7 +9,7 @@
         "accountId": "123456789012",
         "userName": "low-privilege-user"
       },
-      "eventTime": "2026-07-05T07:34:23Z",
+      "eventTime": "2026-07-06T07:25:16Z",
       "eventSource": "sts.amazonaws.com",
       "eventName": "AssumeRole",
       "awsRegion": "us-east-1",

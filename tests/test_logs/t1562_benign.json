@@ -1,0 +1,26 @@
+{
+  "Records": [
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/security-admin",
+        "accountId": "123456789012",
+        "userName": "security-admin"
+      },
+      "eventTime": "2026-07-06T07:25:16Z",
+      "eventSource": "cloudtrail.amazonaws.com",
+      "eventName": "GetTrailStatus",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "10.0.0.10",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {
+        "name": "main-trail"
+      },
+      "responseElements": {},
+      "errorCode": null,
+      "errorMessage": null
+    }
+  ]
+}
