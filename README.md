@@ -61,12 +61,22 @@ Built entirely on AWS Free Tier. No paid infrastructure.
 | 1 | T1078 | Valid Accounts | `t1078_iam_key_creation.yml` | High |
 | 2 | T1530 | Data from Cloud Storage Object | `t1530_s3_enumeration.yml` | Medium |
 | 3 | T1548 | Abuse Elevation Control Mechanism | `t1548_role_assumption.yml` | High |
+| 4 | T1110 | Brute Force | `t1110_brute_force.yml` | High |
+| 5 | T1087 | Account Discovery | `t1087_account_discovery.yml` | Medium |
+| 6 | T1562 | Impair Defenses | `t1562_disable_cloudtrail.yml` | Critical |
 
 ---
 
 ## Results
 
-*Results will be populated as phases are completed.*
+## Results
+
+- **6 ATT&CK techniques** covered across 4 tactics (Persistence, Collection, Privilege Escalation, Credential Access, Discovery, Defense Evasion)
+- **14 alerts** generated across 6 simulated attack scenarios
+- **0 false positives** across all benign test logs
+- **CI pipeline**: all 6 rules pass automated validation on every push
+
+See [`coverage/COVERAGE.md`](coverage/COVERAGE.md) for the full ATT&CK coverage matrix (Phase 3).
 
 ---
 
