@@ -195,6 +195,19 @@ Per-technique analysis in [`docs/investigations/`](docs/investigations/):
 
 ---
 
+## Limitations & Future Work
+
+- **Simulated data**: All logs are generated locally using the real CloudTrail 
+  JSON schema. Connecting to live CloudTrail via S3 or Kinesis Data Streams 
+  is the next step.
+- **Scale**: The current engine processes events sequentially. 
+  For high-volume environments (thousands of events/sec), the next iteration 
+  would use parallel processing (multiprocessing/asyncio) or stream processing 
+  (Apache Kafka or AWS Kinesis).
+- **Correlation**: Rules currently match on single events. Time-windowed 
+  correlation (e.g., "5 failed logins within 60 seconds") would reduce 
+  false negatives for slow brute force attacks.
+
 ## Project Log
 
 See [`PROJECT_LOG.md`](PROJECT_LOG.md) for dated build progress.
@@ -205,3 +218,4 @@ See [`PROJECT_LOG.md`](PROJECT_LOG.md) for dated build progress.
 
 **Abhinav Vijayvergia**
 - GitHub: [@AbhinavVijayvergia](https://github.com/AbhinavVijayvergia)
+
