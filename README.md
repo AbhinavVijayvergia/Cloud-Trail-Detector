@@ -69,14 +69,24 @@ Built entirely on AWS Free Tier. No paid infrastructure.
 
 ## Results
 
-## Results
-
-- **6 ATT&CK techniques** covered across 4 tactics (Persistence, Collection, Privilege Escalation, Credential Access, Discovery, Defense Evasion)
-- **14 alerts** generated across 6 simulated attack scenarios
-- **0 false positives** across all benign test logs
+### Detection Coverage
+- **6 ATT&CK techniques** covered across 6 tactics
+- **6 detection rules** — all with attack + benign test cases
 - **CI pipeline**: all 6 rules pass automated validation on every push
 
-See [`coverage/COVERAGE.md`](coverage/COVERAGE.md) for the full ATT&CK coverage matrix (Phase 3).
+### False Positive Tuning
+Measured on a mixed batch of 35 CloudTrail events (attack + benign):
+
+| Metric | Before Tuning | After Tuning |
+|--------|--------------|--------------|
+| Total alerts fired | 14 | 8 |
+| True positives | 8 | 8 |
+| False positives | 6 | 0 |
+| FP rate | 43% | **0%** |
+
+**FP reduction: 43% → 0% with zero detection loss.**
+
+See [`coverage/COVERAGE.md`](coverage/COVERAGE.md) for the full ATT&CK coverage matrix.
 
 ---
 

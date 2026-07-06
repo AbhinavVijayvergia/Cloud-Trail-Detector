@@ -5,20 +5,18 @@
       "userIdentity": {
         "type": "IAMUser",
         "principalId": "AIDACKCEVSQ6C2EXAMPLE",
-        "arn": "arn:aws:iam::123456789012:user/dev-alice",
+        "arn": "arn:aws:iam::123456789012:user/app-server",
         "accountId": "123456789012",
-        "userName": "dev-alice"
+        "userName": "app-server"
       },
       "eventTime": "2026-07-06T08:07:39Z",
-      "eventSource": "signin.amazonaws.com",
-      "eventName": "ConsoleLogin",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "DescribeInstances",
       "awsRegion": "us-east-1",
-      "sourceIPAddress": "10.0.0.50",
+      "sourceIPAddress": "10.0.0.30",
       "userAgent": "aws-cli/2.13.0 Python/3.10.0",
       "requestParameters": {},
-      "responseElements": {
-        "ConsoleLogin": "Success"
-      },
+      "responseElements": {},
       "errorCode": null,
       "errorMessage": null
     }

@@ -26,19 +26,19 @@ TEST_CASES = [
         "rule_id": "CTD-001",
         "technique": "T1078",
         "attack_log": "t1078_attack.json",
-        "benign_log": "benign_activity.json",
+        "benign_log": "t1078_benign.json",  # was: benign_activity.json
     },
     {
         "rule_id": "CTD-002",
         "technique": "T1530",
         "attack_log": "t1530_attack.json",
-        "benign_log": "benign_activity.json",
+        "benign_log": "t1530_benign.json",  # was: benign_activity.json
     },
     {
         "rule_id": "CTD-003",
         "technique": "T1548",
         "attack_log": "t1548_attack.json",
-        "benign_log": "benign_activity.json",
+        "benign_log": "t1548_benign.json",  # was: benign_activity.json
     },
     {
         "rule_id": "CTD-004",

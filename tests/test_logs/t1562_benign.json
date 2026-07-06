@@ -9,7 +9,7 @@
         "accountId": "123456789012",
         "userName": "security-admin"
       },
-      "eventTime": "2026-07-06T07:25:16Z",
+      "eventTime": "2026-07-06T08:07:39Z",
       "eventSource": "cloudtrail.amazonaws.com",
       "eventName": "GetTrailStatus",
       "awsRegion": "us-east-1",

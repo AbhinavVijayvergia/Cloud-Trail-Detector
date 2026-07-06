@@ -13,7 +13,7 @@
       "eventSource": "ec2.amazonaws.com",
       "eventName": "DescribeInstances",
       "awsRegion": "us-east-1",
-      "sourceIPAddress": "10.0.0.50",
+      "sourceIPAddress": "10.0.0.10",
       "userAgent": "aws-cli/2.13.0 Python/3.10.0",
       "requestParameters": {},
       "responseElements": {},
@@ -36,29 +36,6 @@
       "sourceIPAddress": "10.0.0.100",
       "userAgent": "aws-cli/2.13.0 Python/3.10.0",
       "requestParameters": {},
-      "responseElements": {},
-      "errorCode": null,
-      "errorMessage": null
-    },
-    {
-      "eventVersion": "1.08",
-      "userIdentity": {
-        "type": "IAMUser",
-        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
-        "arn": "arn:aws:iam::123456789012:user/app-server",
-        "accountId": "123456789012",
-        "userName": "app-server"
-      },
-      "eventTime": "2026-07-06T08:07:39Z",
-      "eventSource": "s3.amazonaws.com",
-      "eventName": "GetObject",
-      "awsRegion": "us-east-1",
-      "sourceIPAddress": "10.0.0.25",
-      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
-      "requestParameters": {
-        "bucketName": "app-assets",
-        "key": "logo.png"
-      },
       "responseElements": {},
       "errorCode": null,
       "errorMessage": null

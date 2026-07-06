@@ -1,0 +1,17 @@
+# Allowlist — known safe patterns to suppress from alerts
+# Format: each entry under a rule_id suppresses alerts matching ALL listed conditions
+
+suppressions:
+
+  CTD-003:  # IAM Role Assumption (T1548)
+    - description: "Lambda functions assuming their own execution role — normal AWS behavior"
+      conditions:
+        userIdentity.userName: "lambda-execution-role"
+        userIdentity.type: "AWSService"
+        sourceIPAddress: "10.0.0.50"
+
+  CTD-005:  # IAM Account Enumeration (T1087)
+    - description: "Scheduled compliance scanner — known safe audit tool on internal network"
+      conditions:
+        userIdentity.userName: "compliance-scanner"
+        sourceIPAddress: "10.0.0.200"

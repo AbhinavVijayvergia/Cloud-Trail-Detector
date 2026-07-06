@@ -1,0 +1,597 @@
+{
+  "Records": [
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/dev-alice",
+        "accountId": "123456789012",
+        "userName": "dev-alice"
+      },
+      "eventTime": "2026-07-06T08:00:00Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "DescribeInstances",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "10.0.0.10",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {},
+      "responseElements": {},
+      "errorCode": null,
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/dev-alice",
+        "accountId": "123456789012",
+        "userName": "dev-alice"
+      },
+      "eventTime": "2026-07-06T08:01:00Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "DescribeInstances",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "10.0.0.10",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {},
+      "responseElements": {},
+      "errorCode": null,
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/dev-alice",
+        "accountId": "123456789012",
+        "userName": "dev-alice"
+      },
+      "eventTime": "2026-07-06T08:02:00Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "DescribeInstances",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "10.0.0.10",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {},
+      "responseElements": {},
+      "errorCode": null,
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/dev-alice",
+        "accountId": "123456789012",
+        "userName": "dev-alice"
+      },
+      "eventTime": "2026-07-06T08:03:00Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "DescribeInstances",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "10.0.0.10",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {},
+      "responseElements": {},
+      "errorCode": null,
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/app-server",
+        "accountId": "123456789012",
+        "userName": "app-server"
+      },
+      "eventTime": "2026-07-06T08:05:00Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "GetObject",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "10.0.0.25",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {
+        "bucketName": "app-assets",
+        "key": "config-0.json"
+      },
+      "responseElements": {},
+      "errorCode": null,
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/app-server",
+        "accountId": "123456789012",
+        "userName": "app-server"
+      },
+      "eventTime": "2026-07-06T08:06:00Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "GetObject",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "10.0.0.25",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {
+        "bucketName": "app-assets",
+        "key": "config-1.json"
+      },
+      "responseElements": {},
+      "errorCode": null,
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/app-server",
+        "accountId": "123456789012",
+        "userName": "app-server"
+      },
+      "eventTime": "2026-07-06T08:07:00Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "GetObject",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "10.0.0.25",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {
+        "bucketName": "app-assets",
+        "key": "config-2.json"
+      },
+      "responseElements": {},
+      "errorCode": null,
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "AWSService",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/monitoring-service",
+        "accountId": "123456789012",
+        "userName": "monitoring-service"
+      },
+      "eventTime": "2026-07-06T08:10:00Z",
+      "eventSource": "monitoring.amazonaws.com",
+      "eventName": "PutMetricData",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "10.0.0.100",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {},
+      "responseElements": {},
+      "errorCode": null,
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "AWSService",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/monitoring-service",
+        "accountId": "123456789012",
+        "userName": "monitoring-service"
+      },
+      "eventTime": "2026-07-06T08:11:00Z",
+      "eventSource": "monitoring.amazonaws.com",
+      "eventName": "PutMetricData",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "10.0.0.100",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {},
+      "responseElements": {},
+      "errorCode": null,
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "AWSService",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/monitoring-service",
+        "accountId": "123456789012",
+        "userName": "monitoring-service"
+      },
+      "eventTime": "2026-07-06T08:12:00Z",
+      "eventSource": "monitoring.amazonaws.com",
+      "eventName": "PutMetricData",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "10.0.0.100",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {},
+      "responseElements": {},
+      "errorCode": null,
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "AWSService",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/lambda-execution-role",
+        "accountId": "123456789012",
+        "userName": "lambda-execution-role"
+      },
+      "eventTime": "2026-07-06T08:15:00Z",
+      "eventSource": "sts.amazonaws.com",
+      "eventName": "AssumeRole",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "10.0.0.50",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {
+        "roleArn": "arn:aws:iam::123456789012:role/LambdaExecRole",
+        "roleSessionName": "lambda-session"
+      },
+      "responseElements": {},
+      "errorCode": null,
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "AWSService",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/lambda-execution-role",
+        "accountId": "123456789012",
+        "userName": "lambda-execution-role"
+      },
+      "eventTime": "2026-07-06T08:16:00Z",
+      "eventSource": "sts.amazonaws.com",
+      "eventName": "AssumeRole",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "10.0.0.50",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {
+        "roleArn": "arn:aws:iam::123456789012:role/LambdaExecRole",
+        "roleSessionName": "lambda-session"
+      },
+      "responseElements": {},
+      "errorCode": null,
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "AWSService",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/lambda-execution-role",
+        "accountId": "123456789012",
+        "userName": "lambda-execution-role"
+      },
+      "eventTime": "2026-07-06T08:17:00Z",
+      "eventSource": "sts.amazonaws.com",
+      "eventName": "AssumeRole",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "10.0.0.50",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {
+        "roleArn": "arn:aws:iam::123456789012:role/LambdaExecRole",
+        "roleSessionName": "lambda-session"
+      },
+      "responseElements": {},
+      "errorCode": null,
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "AWSService",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/lambda-execution-role",
+        "accountId": "123456789012",
+        "userName": "lambda-execution-role"
+      },
+      "eventTime": "2026-07-06T08:18:00Z",
+      "eventSource": "sts.amazonaws.com",
+      "eventName": "AssumeRole",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "10.0.0.50",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {
+        "roleArn": "arn:aws:iam::123456789012:role/LambdaExecRole",
+        "roleSessionName": "lambda-session"
+      },
+      "responseElements": {},
+      "errorCode": null,
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/compliance-scanner",
+        "accountId": "123456789012",
+        "userName": "compliance-scanner"
+      },
+      "eventTime": "2026-07-06T08:20:00Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "ListUsers",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "10.0.0.200",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {},
+      "responseElements": {},
+      "errorCode": null,
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/compliance-scanner",
+        "accountId": "123456789012",
+        "userName": "compliance-scanner"
+      },
+      "eventTime": "2026-07-06T08:21:00Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "ListUsers",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "10.0.0.200",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {},
+      "responseElements": {},
+      "errorCode": null,
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/dev-user-0",
+        "accountId": "123456789012",
+        "userName": "dev-user-0"
+      },
+      "eventTime": "2026-07-06T08:25:00Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "10.0.0.30",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {},
+      "responseElements": {
+        "ConsoleLogin": "Success"
+      },
+      "errorCode": null,
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/dev-user-1",
+        "accountId": "123456789012",
+        "userName": "dev-user-1"
+      },
+      "eventTime": "2026-07-06T08:26:00Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "10.0.0.30",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {},
+      "responseElements": {
+        "ConsoleLogin": "Success"
+      },
+      "errorCode": null,
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/dev-user-2",
+        "accountId": "123456789012",
+        "userName": "dev-user-2"
+      },
+      "eventTime": "2026-07-06T08:27:00Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "10.0.0.30",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {},
+      "responseElements": {
+        "ConsoleLogin": "Success"
+      },
+      "errorCode": null,
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/security-admin",
+        "accountId": "123456789012",
+        "userName": "security-admin"
+      },
+      "eventTime": "2026-07-06T08:30:00Z",
+      "eventSource": "cloudtrail.amazonaws.com",
+      "eventName": "GetTrailStatus",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "10.0.0.10",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {},
+      "responseElements": {},
+      "errorCode": null,
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/compromised-user",
+        "accountId": "123456789012",
+        "userName": "compromised-user"
+      },
+      "eventTime": "2026-07-06T08:35:00Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "CreateAccessKey",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.23",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {},
+      "responseElements": {},
+      "errorCode": null,
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/recon-user",
+        "accountId": "123456789012",
+        "userName": "recon-user"
+      },
+      "eventTime": "2026-07-06T08:37:00Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "ListBuckets",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.50",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {},
+      "responseElements": {},
+      "errorCode": null,
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/recon-user",
+        "accountId": "123456789012",
+        "userName": "recon-user"
+      },
+      "eventTime": "2026-07-06T08:38:00Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "GetBucketAcl",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.50",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {},
+      "responseElements": {},
+      "errorCode": null,
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/recon-user",
+        "accountId": "123456789012",
+        "userName": "recon-user"
+      },
+      "eventTime": "2026-07-06T08:39:00Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "ListObjects",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.50",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {},
+      "responseElements": {},
+      "errorCode": null,
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/admin",
+        "accountId": "123456789012",
+        "userName": "admin"
+      },
+      "eventTime": "2026-07-06T08:40:00Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.77",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {},
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
+      "errorCode": null,
+      "errorMessage": "Failed authentication"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/admin",
+        "accountId": "123456789012",
+        "userName": "admin"
+      },
+      "eventTime": "2026-07-06T08:41:00Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.77",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {},
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
+      "errorCode": null,
+      "errorMessage": "Failed authentication"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/admin",
+        "accountId": "123456789012",
+        "userName": "admin"
+      },
+      "eventTime": "2026-07-06T08:42:00Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.77",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {},
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
+      "errorCode": null,
+      "errorMessage": "Failed authentication"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/attacker-user",
+        "accountId": "123456789012",
+        "userName": "attacker-user"
+      },
+      "eventTime": "2026-07-06T08:45:00Z",
+      "eventSource": "cloudtrail.amazonaws.com",
+      "eventName": "StopLogging",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.11",
+      "userAgent": "aws-cli/2.13.0 Python/3.10.0",
+      "requestParameters": {},
+      "responseElements": {},
+      "errorCode": null,
+      "errorMessage": null
+    }
+  ]
+}
